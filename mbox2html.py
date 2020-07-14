@@ -90,7 +90,7 @@ template_index = jinja2.Template("""
 """.strip(), trim_blocks=True, lstrip_blocks=True, autoescape=True)
 
 # Mailbox parser
-inbox = mailbox.mbox("KenyaBirdsNet2002-2019.mbox")
+inbox = mailbox.mbox("KenyaBirdsNet2002-2019_2.mbox")
 
 # Test with attachment
 # message = inbox.items()[555][1]
@@ -137,6 +137,8 @@ for u, message in inbox.items():
             # Only include if the attachement file is there
             if (os.path.isfile("Attachments/"+i.get_filename())):
                 info['attachments'].append("../Attachments/"+i.get_filename())
+            else:
+                print("Attachments/"+i.get_filename())
     # Create attachement string for index
     info['attachments_str'] = '*' if len(info['attachments'])>0 else ''
     
@@ -158,4 +160,6 @@ with codecs.open("index.html", 'w', encoding='utf8') as f:
 # inbox.items()[555][1].as_string()
 
 
-        
+for u, message in inbox.items():
+    if ():
+        print(u)

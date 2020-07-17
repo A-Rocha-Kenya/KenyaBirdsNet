@@ -114,7 +114,7 @@ for u, message in inbox.items():
     # Title
     info['From'] =  [x[1] for x in msg.items() if x[0]=='From'][0]
     d = parse([x[1] for x in msg.items() if x[0]=='Date'][0])
-    info['Date'] =   d.strftime('%Y-%M-%d %H:%m')
+    info['Date'] =   d.strftime('%Y-%m-%d %H:%M')
     info['Subject'] =  [x[1] for x in msg.items() if x[0]=='Subject'][0]
     info['title'] =  info['Subject']
     
@@ -143,7 +143,7 @@ for u, message in inbox.items():
     info['attachments_str'] = '*' if len(info['attachments'])>0 else ''
     
     # filename
-    info['outfile'] = 'Messages/' + slugify( d.strftime('%Y%M%d') + '-' + info['title'] ) + '.html'
+    info['outfile'] = 'Messages/' + slugify( d.strftime('%Y%m%d') + '-' + info['title'] ) + '.html'
     
     # Add to index 
     index.append(info)

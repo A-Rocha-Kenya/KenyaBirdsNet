@@ -90,7 +90,7 @@ template_index = jinja2.Template("""
 """.strip(), trim_blocks=True, lstrip_blocks=True, autoescape=True)
 
 # Mailbox parser
-inbox = mailbox.mbox("KenyaBirdsNet2002-2019_2.mbox")
+inbox = mailbox.mbox("KenyaBirdsNet2002-2019.mbox")
 
 # Test with attachment
 # message = inbox.items()[555][1]

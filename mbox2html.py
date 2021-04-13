@@ -159,7 +159,7 @@ with codecs.open("index.html", 'w', encoding='utf8') as f:
 
 # inbox.items()[555][1].as_string()
 
-
-for u, message in inbox.items():
-    if ():
-        print(u)
+t = []
+with codecs.open("sitemap.txt", 'w', encoding='utf8') as f:
+    for u in index:
+        f.write(u['outfile']+'\n')
